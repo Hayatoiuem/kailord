@@ -1588,14 +1588,6 @@ spawn(function()
 	end
 end)
 
-local DragonTrident = SwordReal:AddLabel({
-	Name = "❌ | Dragon Trident"
-})
-
-local Yama = SwordReal:AddLabel({
-	Name = "❌ | Yama"
-})
-
 local Yama_All_Mon = {
 	["Mon Quest"] = {"Diablo [Lv. 1750]","Deandre [Lv. 1750]","Urban [Lv. 1750]"},
 	["Mon"] = {"Diablo","Deandre","Urban"},
