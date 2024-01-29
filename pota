@@ -586,7 +586,6 @@ G:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.Start_Kaitun = Value
-		Stop_Tween(_G.Start_Kaitun)
 	end
 })
 
