@@ -3388,27 +3388,18 @@ spawn(function()
 		end
 	end)
 	
-	local Module = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-	local CombatFramework = debug.getupvalues(Module)[2]
-	local CameraShakerR = require(game.ReplicatedStorage.Util.CameraShaker)
+	function Click()
+		local Module = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework)
+		local CombatFramework = debug.getupvalues(Module)[2]
+		local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
+		CamShake:Stop()
+		CombatFramework.activeController.attacking = false
+		CombatFramework.activeController.timeToNextAttack = 0
+		CombatFramework.activeController.hitboxMagnitude = 180
+		game:GetService'VirtualUser':CaptureController()
+		game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+	end
 	
-	task.spawn(function()
-		while true do task.wait()
-			if _G.FastAttack then
-				pcall(function()
-					CameraShakerR:Stop()
-					CombatFramework.activeController.attacking = false
-					CombatFramework.activeController.timeToNextAttack = 0
-					CombatFramework.activeController.increment = 4
-					CombatFramework.activeController.hitboxMagnitude = 100
-					CombatFramework.activeController.blocking = false
-					CombatFramework.activeController.timeToNextBlock = 0
-					CombatFramework.activeController.focusStart = 0
-					CombatFramework.activeController.humanoid.AutoRotate = true
-				end)
-			end
-		end
-	end)
 	
 	local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework")))[2]
 	local VirtualUser = game:GetService('VirtualUser')
