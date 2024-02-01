@@ -1,313 +1,3 @@
----------------------------------------------------------------------------------------------------------------------------------------------------------
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({
-    Name = "Nano Hub", 
-    HidePremium = false, 
-    IntroText = "NanoHub Library", 
-    SaveConfig = true, 
-    ConfigFolder = "Nano Hub"
-})
-
-OrionLib:MakeNotification({
-	Name = "Nano Hub",
-	Content = "Choose Teams Bro?",
-	Image = "rbxassetid://4483345998",
-	Time = 7
-})
-
-OrionLib:MakeNotification({
-    Name = "Nano Hub",
-    Content = "Please Wait loading script...,Do not enable any function",
-    Image = "rbxassetid://4483345998",
-    Time = 5
-})
-
--------------------------// Tab \\---------------------------------
-
-local I = Window:MakeTab({
-    Name = "Intro",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local M = Window:MakeTab({
-    Name = "Main",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local Se = Window:MakeTab({
-    Name = "Setting",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local IQ = Window:MakeTab({
-    Name = "Item and Quest",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local RA = Window:MakeTab({
-    Name = "Raid",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local ES = Window:MakeTab({
-    Name = "Even Sea",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local E = Window:MakeTab({
-    Name = "Esp",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-
-local S = Window:MakeTab({
-    Name = "Stats",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local T = Window:MakeTab({
-    Name = "Teleport",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local RT = Window:MakeTab({
-    Name = "Race and Trial",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-local SH = Window:MakeTab({
-    Name = "Shop",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
----------------------------------------------------------------------------------------------------------------------------------------------------------
-local Section = I:AddSection({
-    Name = "Credit"
-})
-
-
-I:AddLabel("Script By Hayato")
-
-local Section = I:AddSection({
-    Name = "Update"
-})
-
-I:AddLabel("[+] Nano Hub")
-I:AddLabel("[+] Load Script Faster!")
-
-local Section = I:AddSection({
-    Name = "Status"
-})
-
-local locallv = I:AddLabel("Level")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                locallv:Set("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
-            end)
-        end
-    end)
-    
-    local localrace = I:AddLabel("Race")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localrace:Set("Race :".." "..game:GetService("Players").LocalPlayer.Data.Race.Value)
-            end)
-        end
-    end)
-    
-    local localbeli = I:AddLabel("Beli")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localbeli:Set("Beli :".." "..game:GetService("Players").LocalPlayer.Data.Beli.Value)
-            end)
-        end
-    end)
-    
-    local localfrag = I:AddLabel("Fragment")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localfrag:Set("Fragments :".." "..game:GetService("Players").LocalPlayer.Data.Fragments.Value)
-            end)
-        end
-    end)
-    
-    
-    local localexp = I:AddLabel("ExP")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localexp:Set("ExP Points :".." "..game:GetService("Players").LocalPlayer.Data.Exp.Value)
-            end)
-        end
-    end)
-    
-    local localstat = I:AddLabel("Stats Points")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localstat:Set("Stats Points :".." "..game:GetService("Players").LocalPlayer.Data.Points.Value)
-            end)
-        end
-    end)
-    
-    local localbountyhornor = I:AddLabel("Bounty")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localbountyhornor:Set("Bounty / Honor :".." "..game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value)
-            end)
-        end
-    end)
-    
-    local localDevil = I:AddLabel("Devil Fruit")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                if game:GetService("Players").LocalPlayer.Character:FindFirstChild(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value) or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value) then
-                    localDevil:Set("Devil Fruit :".." "..game:GetService("Players").LocalPlayer.Data.DevilFruit.Value)
-                else
-                    localDevil:Set("Not Have Devil Fruit")
-                end
-            end)
-        end
-    end)
-
-    local Section = I:AddSection({
-        Name = "Status Hack"
-    })
-    
-    local LevelFarmFarm I:AddLabel("Kaitun : Tao đang làm")
-    I:AddLabel("Config Save : Comming Son...")
-    local Farmfast = I:AddLabel("Farm Fast : ❌")
-    local Bypass = I:AddLabel("Bypass ❌")
-    local Section = I:AddSection({
-        Name = "World"
-    })
-    local WolrdSet3 = I:AddLabel("World 1 ❌ ")
-    local WolrdSet = I:AddLabel("Wolrd : 2 ❌")
-    local WolrdSet1 = I:AddLabel("Wolrd : 3 ❌")
-    local Section = I:AddSection({
-        Name = "Stats Point"
-    })
-    local StastMelee = I:AddLabel("")
-    local StastDefense = I:AddLabel("")
-    local StastSword = I:AddLabel("")
-    local StastGun = I:AddLabel("")
-    local StastDevilFruit = I:AddLabel("")
-    local PointsStast = I:AddLabel("")
-    local Section = I:AddSection({
-        Name = "Melee Check"
-    })
-    local  Superhuman =             I:AddLabel("❌ : Superhuman")
-    local  DeathStep =              I:AddLabel("❌ : Sharkman Karate")
-    local  ElectricClaw =             I:AddLabel("❌ : Electric Claw")
-    local  DragonTalon =             I:AddLabel("❌ : Dragon Talon")
-    local   GodHuman =            I:AddLabel("❌ : God Human")
-    local Section = I:AddSection({
-        Name = "Sword Legend Check"
-    })
-    local   Shisui =            I:AddLabel("❌ : Shisui")
-    local     Saddi =           I:AddLabel("❌ : Saddi")
-    local      Wando =         I:AddLabel("❌ : Wando")
-    local     TrueTripleKatana          I:AddLabel("❌ : True Triple Katana")
-    local Section = I:AddSection({
-        Name = "World 1 Weapon"
-    })
-    local   Saber  = I:AddLabel("❌ : Saber")
-    local Section = I:AddSection({
-        Name = "World 2 Weapon"
-    })
-    local       Rengoku =         I:AddLabel("❌ : Rengoku")
-    local    MidnightBlade =            I:AddLabel("❌ : Midnight Blade")
-    local       DragonTrident =        I:AddLabel("❌ : DragonTrident")
-    local Section = I:AddSection({
-        Name = "World 3 Weapon"
-    })
-    local     Yama =          I:AddLabel("❌ : Yama")
-    local        BuddySword =        I:AddLabel("❌ : Buddy Sword")
-    local       Canvander =        I:AddLabel("❌ : Canvander")
-    local      TwinHooks =         I:AddLabel("❌ : Twin Hooks")
-    local     SpikeyTrident =          I:AddLabel("❌ : Spikey Trident")
-    local   HallowScythe =            I:AddLabel("❌ : Hallow Scythe")
-    local     DarkDagger =           I:AddLabel("❌ : Dark Dagger")
-    local     Tushita          I:AddLabel("❌ : Tushita")
-    local Section = I:AddSection({
-        Name = "Gun"
-    })
-    local   Kabucha =            I:AddLabel("❌ : Kabucha")
-    local   AcidumRifle =             I:AddLabel("❌ : Acidum Rifle")
-    local    BizarreRifle =            I:AddLabel("❌ : Bizarre Rifle")
-    local Section = I:AddSection({
-        Name = "Quest"
-    })
-    local   BartiloQuest =            I:AddLabel("❌ : Bartilo Quest")
-    local   DonSwanQuest =             I:AddLabel("❌ : Don Swan Quest")
-    local    KillDonSwan =           I:AddLabel("❌ : Kill Don Swan")
-
-
-local Section = I:AddSection({
-    Name = "Acessory"
-})
-
-
-local Dark_Coat = I:AddLabel("❌: Dark Coat")
-local Ghoul_Mask = I:AddLabel("❌: Ghoul Mask")
-local Swan_Glass = I:AddLabel("❌: Swan Glass")
-local Pale_Scarf = I:AddLabel("❌: Pale Scarf")
-local Valkyrie_Helm = I:AddLabel("❌: Valkyrie Helm")
-
-
-spawn(function()
-    while task.wait() do
-        pcall(function()
-            for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
-                if v.Name == "Saber" then
-                    Dark_Coat:Set("✅: Dark Coat")
-                end
-                if v.Name == "Ghoul Mask" then
-                    Ghoul_Mask:Set("✅: Ghoul Mask")
-                end
-                if v.Name == "Swan Glasses" then
-                    Swan_Glass:Set("✅: Swan Glass")
-                end
-                if v.Name == "Pale Scarf" then
-                    Pale_Scarf:Set("✅: Pale Scarf")
-                end
-                if v.Name == "Valkyrie Helmet" then
-                    Valkyrie_Helm:Set("✅: Valkyrie Helmet")
-                end
-            end
-        end)
-    end
-end)
-
-
----------------------------------// Sea \\---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-local placeId = game.PlaceId
 if game.PlaceId == 2753915549 then
     World1 = true
 elseif game.PlaceId == 4442272183 then
@@ -318,10 +8,8 @@ else
     game:GetService("Players").LocalPlayer:Kick("Do not Support, Please wait...")
 end
 
--------------------------------// Check Quest \\---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-function CheckQuest()
-    local MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
+function CheckQuest() 
+    MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
     if World1 then
         if MyLevel == 1 or MyLevel <= 9 then
             Mon = "Bandit"
@@ -946,382 +634,67 @@ function CheckQuest()
     end
 end
 
---// Select Monster
-if First_Sea then
-    tableMon = {
-      "Bandit","Monkey","Gorilla","Pirate","Brute","Desert Bandit","Desert Officer","Snow Bandit","Snowman","Chief Petty Officer","Sky Bandit","Dark Master","Prisoner", "Dangerous Prisoner","Toga Warrior","Gladiator","Military Soldier","Military Spy","Fishman Warrior","Fishman Commando","God's Guard","Shanda","Royal Squad","Royal Soldier","Galley Pirate","Galley Captain"
-    } elseif Second_Sea then
-    tableMon = {
-      "Raider","Mercenary","Swan Pirate","Factory Staff","Marine Lieutenant","Marine Captain","Zombie","Vampire","Snow Trooper","Winter Warrior","Lab Subordinate","Horned Warrior","Magma Ninja","Lava Pirate","Ship Deckhand","Ship Engineer","Ship Steward","Ship Officer","Arctic Warrior","Snow Lurker","Sea Soldier","Water Fighter"
-    } elseif Third_Sea then
-    tableMon = {
-      "Pirate Millionaire","Dragon Crew Warrior","Dragon Crew Archer","Female Islander","Giant Islander","Marine Commodore","Marine Rear Admiral","Fishman Raider","Fishman Captain","Forest Pirate","Mythological Pirate","Jungle Pirate","Musketeer Pirate","Reborn Skeleton","Living Zombie","Demonic Soul","Posessed Mummy", "Peanut Scout", "Peanut President", "Ice Cream Chef", "Ice Cream Commander", "Cookie Crafter", "Cake Guard", "Baking Staff", "Head Baker", "Cocoa Warrior", "Chocolate Bar Battler", "Sweet Thief", "Candy Rebel", "Candy Pirate", "Snow Demon","Isle Outlaw","Island Boy","Isle Champion"
-    }
-    end
-    
-    --// Select Island
-    if First_Sea then
-    AreaList = {
-      'Jungle', 'Buggy', 'Desert', 'Snow', 'Marine', 'Sky', 'Prison', 'Colosseum', 'Magma', 'Fishman', 'Sky Island', 'Fountain'
-    } elseif Second_Sea then
-    AreaList = {
-      'Area 1', 'Area 2', 'Zombie', 'Marine', 'Snow Mountain', 'Ice fire', 'Ship', 'Frost', 'Forgotten'
-    } elseif Third_Sea then
-    AreaList = {
-      'Pirate Port', 'Amazon', 'Marine Tree', 'Deep Forest', 'Haunted Castle', 'Nut Island', 'Ice Cream Island', 'Cake Island', 'Choco Island', 'Candy Island','Tiki Outpost'
-    }
-    end
-    
-    --// Check Boss Quest
-    function CheckBossQuest()
-        if First_Sea then   
-            if SelectBoss == "The Gorilla King" then
-                BossMon = "The Gorilla King"
-                NameBoss = 'The Gorrila King'
-                NameQuestBoss = "JungleQuest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$2,000\n7,000 Exp."
-                CFrameQBoss = CFrame.new(-1601.6553955078, 36.85213470459, 153.38809204102)
-                CFrameBoss = CFrame.new(-1088.75977, 8.13463783, -488.559906, -0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, -0.707134247)
-            elseif SelectBoss == "Bobby"  then                
-                BossMon = "Bobby"
-                NameBoss = 'Bobby'
-                NameQuestBoss = "BuggyQuest1"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$8,000\n35,000 Exp."
-                CFrameQBoss = CFrame.new(-1140.1761474609, 4.752049446106, 3827.4057617188)
-                CFrameBoss = CFrame.new(-1087.3760986328, 46.949409484863, 4040.1462402344)
-            elseif SelectBoss == "The Saw" then
-                BossMon = "The Saw"
-                NameBoss = 'The Saw'
-                CFrameBoss = CFrame.new(-784.89715576172, 72.427383422852, 1603.5822753906)
-            elseif SelectBoss == "Yeti" then
-                BossMon = "Yeti"
-                NameBoss = 'Yeti'
-                NameQuestBoss = "SnowQuest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$10,000\n180,000 Exp."
-                CFrameQBoss = CFrame.new(1386.8073730469, 87.272789001465, -1298.3576660156)
-                CFrameBoss = CFrame.new(1218.7956542969, 138.01184082031, -1488.0262451172)
-            elseif SelectBoss == "Mob Leader" then
-                BossMon = "Mob Leader"
-                NameBoss = 'Mob Leader'
-                CFrameBoss = CFrame.new(-2844.7307128906, 7.4180502891541, 5356.6723632813)
-            elseif SelectBoss == "Vice Admiral" then
-                BossMon = "Vice Admiral"
-                NameBoss = 'Vice Admiral'
-                NameQuestBoss = "MarineQuest2"
-                QuestLvBoss = 2
-                RewardBoss = "Reward:\n$10,000\n180,000 Exp."
-                CFrameQBoss = CFrame.new(-5036.2465820313, 28.677835464478, 4324.56640625)
-                CFrameBoss = CFrame.new(-5006.5454101563, 88.032081604004, 4353.162109375)
-            elseif SelectBoss == "Saber Expert" then
-                NameBoss = 'Saber Expert'
-                BossMon = "Saber Expert"
-                CFrameBoss = CFrame.new(-1458.89502, 29.8870335, -50.633564)
-            elseif SelectBoss == "Warden" then
-                BossMon = "Warden"
-                NameBoss = 'Warden'
-                NameQuestBoss = "ImpelQuest"
-                QuestLvBoss = 1
-                RewardBoss = "Reward:\n$6,000\n850,000 Exp."
-                CFrameBoss = CFrame.new(5278.04932, 2.15167475, 944.101929, 0.220546961, -4.49946401e-06, 0.975376427, -1.95412576e-05, 1, 9.03162072e-06, -0.975376427, -2.10519756e-05, 0.220546961)
-                CFrameQBoss = CFrame.new(5191.86133, 2.84020686, 686.438721, -0.731384635, 0, 0.681965172, 0, 1, 0, -0.681965172, 0, -0.731384635)
-            elseif SelectBoss == "Chief Warden" then
-                BossMon = "Chief Warden"
-                NameBoss = 'Chief Warden'
-                NameQuestBoss = "ImpelQuest"
-                QuestLvBoss = 2
-                RewardBoss = "Reward:\n$10,000\n1,000,000 Exp."
-                CFrameBoss = CFrame.new(5206.92578, 0.997753382, 814.976746, 0.342041343, -0.00062915677, 0.939684749, 0.00191645394, 0.999998152, -2.80422337e-05, -0.939682961, 0.00181045406, 0.342041939)
-                CFrameQBoss = CFrame.new(5191.86133, 2.84020686, 686.438721, -0.731384635, 0, 0.681965172, 0, 1, 0, -0.681965172, 0, -0.731384635)
-            elseif SelectBoss == "Swan" then
-                BossMon = "Swan"
-                NameBoss = 'Swan'
-                NameQuestBoss = "ImpelQuest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$15,000\n1,600,000 Exp."
-                CFrameBoss = CFrame.new(5325.09619, 7.03906584, 719.570679, -0.309060812, 0, 0.951042235, 0, 1, 0, -0.951042235, 0, -0.309060812)
-                CFrameQBoss = CFrame.new(5191.86133, 2.84020686, 686.438721, -0.731384635, 0, 0.681965172, 0, 1, 0, -0.681965172, 0, -0.731384635)
-            elseif SelectBoss == "Magma Admiral" then
-                BossMon = "Magma Admiral"
-                NameBoss = 'Magma Admiral'
-                NameQuestBoss = "MagmaQuest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$15,000\n2,800,000 Exp."
-                CFrameQBoss = CFrame.new(-5314.6220703125, 12.262420654297, 8517.279296875)
-                CFrameBoss = CFrame.new(-5765.8969726563, 82.92064666748, 8718.3046875)
-            elseif SelectBoss == "Fishman Lord" then
-                BossMon = "Fishman Lord"
-                NameBoss = 'Fishman Lord'
-                NameQuestBoss = "FishmanQuest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$15,000\n4,000,000 Exp."
-                CFrameQBoss = CFrame.new(61122.65234375, 18.497442245483, 1569.3997802734)
-                CFrameBoss = CFrame.new(61260.15234375, 30.950881958008, 1193.4329833984)
-            elseif SelectBoss == "Wysper" then
-                BossMon = "Wysper"
-                NameBoss = 'Wysper'
-                NameQuestBoss = "SkyExp1Quest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$15,000\n4,800,000 Exp."
-                CFrameQBoss = CFrame.new(-7861.947265625, 5545.517578125, -379.85974121094)
-                CFrameBoss = CFrame.new(-7866.1333007813, 5576.4311523438, -546.74816894531)
-            elseif SelectBoss == "Thunder God" then
-                BossMon = "Thunder God"
-                NameBoss = 'Thunder God'
-                NameQuestBoss = "SkyExp2Quest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$20,000\n5,800,000 Exp."
-                CFrameQBoss = CFrame.new(-7903.3828125, 5635.9897460938, -1410.923828125)
-                CFrameBoss = CFrame.new(-7994.984375, 5761.025390625, -2088.6479492188)
-            elseif SelectBoss == "Cyborg" then
-                BossMon = "Cyborg"
-                NameBoss = 'Cyborg'
-                NameQuestBoss = "FountainQuest"
-                QuestLvBoss = 3
-                RewardBoss = "Reward:\n$20,000\n7,500,000 Exp."
-                CFrameQBoss = CFrame.new(5258.2788085938, 38.526931762695, 4050.044921875)
-                CFrameBoss = CFrame.new(6094.0249023438, 73.770050048828, 3825.7348632813)
-            elseif SelectBoss == "Ice Admiral" then
-                BossMon = "Ice Admiral"
-                NameBoss = 'Ice Admiral'
-                CFrameBoss = CFrame.new(1266.08948, 26.1757946, -1399.57678, -0.573599219, 0, -0.81913656, 0, 1, 0, 0.81913656, 0, -0.573599219)
-            elseif SelectBoss == "Greybeard" then
-            BossMon = "Greybeard"
-            NameBoss = 'Greybeard'
-            CFrameBoss = CFrame.new(-5081.3452148438, 85.221641540527, 4257.3588867188)
+function Hop()
+    local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
         end
-    end
-    if Second_Sea then
-        if SelectBoss == "Diamond" then
-            BossMon = "Diamond"
-            NameBoss = 'Diamond'
-            NameQuestBoss = "Area1Quest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$25,000\n9,000,000 Exp."
-            CFrameQBoss = CFrame.new(-427.5666809082, 73.313781738281, 1835.4208984375)
-            CFrameBoss = CFrame.new(-1576.7166748047, 198.59265136719, 13.724286079407)
-        elseif SelectBoss == "Jeremy" then
-            BossMon = "Jeremy"
-            NameBoss = 'Jeremy'
-            NameQuestBoss = "Area2Quest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$25,000\n11,500,000 Exp."
-            CFrameQBoss = CFrame.new(636.79943847656, 73.413787841797, 918.00415039063)
-            CFrameBoss = CFrame.new(2006.9261474609, 448.95666503906, 853.98284912109)
-        elseif SelectBoss == "Fajita" then
-            BossMon = "Fajita"
-            NameBoss = 'Fajita'
-            NameQuestBoss = "MarineQuest3"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$25,000\n15,000,000 Exp."
-            CFrameQBoss = CFrame.new(-2441.986328125, 73.359344482422, -3217.5324707031)
-            CFrameBoss = CFrame.new(-2172.7399902344, 103.32216644287, -4015.025390625)
-        elseif SelectBoss == "Don Swan" then
-            BossMon = "Don Swan"
-            NameBoss = 'Don Swan'
-            CFrameBoss = CFrame.new(2286.2004394531, 15.177839279175, 863.8388671875)
-        elseif SelectBoss == "Smoke Admiral" then
-            BossMon = "Smoke Admiral"
-            NameBoss = 'Smoke Admiral'
-            NameQuestBoss = "IceSideQuest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$20,000\n25,000,000 Exp."
-            CFrameQBoss = CFrame.new(-5429.0473632813, 15.977565765381, -5297.9614257813)
-            CFrameBoss = CFrame.new(-5275.1987304688, 20.757257461548, -5260.6669921875)
-        elseif SelectBoss == "Awakened Ice Admiral" then
-            BossMon = "Awakened Ice Admiral"
-            NameBoss = 'Awakened Ice Admiral'
-            NameQuestBoss = "FrostQuest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$20,000\n36,000,000 Exp."
-            CFrameQBoss = CFrame.new(5668.9780273438, 28.519989013672, -6483.3520507813)
-            CFrameBoss = CFrame.new(6403.5439453125, 340.29766845703, -6894.5595703125)
-        elseif SelectBoss == "Tide Keeper" then
-            BossMon = "Tide Keeper"
-            NameBoss = 'Tide Keeper'
-            NameQuestBoss = "ForgottenQuest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$12,500\n38,000,000 Exp."
-            CFrameQBoss = CFrame.new(-3053.9814453125, 237.18954467773, -10145.0390625)
-            CFrameBoss = CFrame.new(-3795.6423339844, 105.88877105713, -11421.307617188)
-        elseif SelectBoss == "Darkbeard" then
-            BossMon = "Darkbeard"
-            NameBoss = 'Darkbeard'
-            CFrameMon = CFrame.new(3677.08203125, 62.751937866211, -3144.8332519531)
-        elseif SelectBoss == "Cursed Captain" then
-            BossMon = "Cursed Captain"
-            NameBoss = 'Cursed Captain'
-            CFrameBoss = CFrame.new(916.928589, 181.092773, 33422)
-        elseif SelectBoss == "Order" then
-            BossMon = "Order"
-            NameBoss = 'Order'
-            CFrameBoss = CFrame.new(-6217.2021484375, 28.047645568848, -5053.1357421875)
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
         end
-    end
-    if Third_Sea then
-        if SelectBoss == "Stone" then
-            BossMon = "Stone"
-            NameBoss = 'Stone'
-            NameQuestBoss = "PiratePortQuest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$25,000\n40,000,000 Exp."
-            CFrameQBoss = CFrame.new(-289.76705932617, 43.819011688232, 5579.9384765625)
-            CFrameBoss = CFrame.new(-1027.6512451172, 92.404174804688, 6578.8530273438)
-        elseif SelectBoss == "Island Empress" then
-            BossMon = "Island Empress"
-            NameBoss = 'Island Empress'
-            NameQuestBoss = "AmazonQuest2"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$30,000\n52,000,000 Exp."
-            CFrameQBoss = CFrame.new(5445.9541015625, 601.62945556641, 751.43792724609)
-            CFrameBoss = CFrame.new(5543.86328125, 668.97399902344, 199.0341796875)
-        elseif SelectBoss == "Kilo Admiral" then
-            BossMon = "Kilo Admiral"
-            NameBoss = 'Kilo Admiral'
-            NameQuestBoss = "MarineTreeIsland"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$35,000\n56,000,000 Exp."
-            CFrameQBoss = CFrame.new(2179.3010253906, 28.731239318848, -6739.9741210938)
-            CFrameBoss = CFrame.new(2764.2233886719, 432.46154785156, -7144.4580078125)
-        elseif SelectBoss == "Captain Elephant" then
-            BossMon = "Captain Elephant"
-            NameBoss = 'Captain Elephant'
-            NameQuestBoss = "DeepForestIsland"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$40,000\n67,000,000 Exp."
-            CFrameQBoss = CFrame.new(-13232.682617188, 332.40396118164, -7626.01171875)
-            CFrameBoss = CFrame.new(-13376.7578125, 433.28689575195, -8071.392578125)
-        elseif SelectBoss == "Beautiful Pirate" then
-            BossMon = "Beautiful Pirate"
-            NameBoss = 'Beautiful Pirate'
-            NameQuestBoss = "DeepForestIsland2"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$50,000\n70,000,000 Exp."
-            CFrameQBoss = CFrame.new(-12682.096679688, 390.88653564453, -9902.1240234375)
-            CFrameBoss = CFrame.new(5283.609375, 22.56223487854, -110.78285217285)
-        elseif SelectBoss == "Cake Queen" then
-            BossMon = "Cake Queen"
-            NameBoss = 'Cake Queen'
-            NameQuestBoss = "IceCreamIslandQuest"
-            QuestLvBoss = 3
-            RewardBoss = "Reward:\n$30,000\n112,500,000 Exp."
-            CFrameQBoss = CFrame.new(-819.376709, 64.9259796, -10967.2832, -0.766061664, 0, 0.642767608, 0, 1, 0, -0.642767608, 0, -0.766061664)
-            CFrameBoss = CFrame.new(-678.648804, 381.353943, -11114.2012, -0.908641815, 0.00149294338, 0.41757378, 0.00837114919, 0.999857843, 0.0146408929, -0.417492568, 0.0167988986, -0.90852499)
-        elseif SelectBoss == "Longma" then
-            BossMon = "Longma"
-            NameBoss = 'Longma'
-            CFrameBoss = CFrame.new(-10238.875976563, 389.7912902832, -9549.7939453125)
-        elseif SelectBoss == "Soul Reaper" then
-            BossMon = "Soul Reaper"
-            NameBoss = 'Soul Reaper'
-            CFrameBoss = CFrame.new(-9524.7890625, 315.80429077148, 6655.7192382813)
-        elseif SelectBoss == "rip_indra True Form" then
-            BossMon = "rip_indra True Form"
-            NameBoss = 'rip_indra True Form'
-            CFrameBoss = CFrame.new(-5415.3920898438, 505.74133300781, -2814.0166015625)
-        end
-    end
-end
-    
-    --// Check Material
-    function MaterialMon()
-        if SelectMaterial == "Radioactive Material" then
-            MMon = "Factory Staff"
-            MPos = CFrame.new(295,73,-56)
-            SP = "Default"
-        elseif SelectMaterial == "Mystic Droplet" then
-            MMon = "Water Fighter"
-            MPos = CFrame.new(-3385,239,-10542)
-            SP = "Default"
-        elseif SelectMaterial == "Magma Ore" then   
-            if First_Sea then
-                MMon = "Military Spy"
-                MPos = CFrame.new(-5815,84,8820)
-                SP = "Default"
-        elseif Second_Sea then
-                MMon = "Magma Ninja"
-                MPos = CFrame.new(-5428,78,-5959)
-                SP = "Default"
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(4)
+                end
             end
-        elseif SelectMaterial == "Angel Wings" then
-                MMon = "God's Guard"
-                MPos = CFrame.new(-4698,845,-1912)
-                SP = "Default"
-                if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-7859.09814, 5544.19043, -381.476196)).Magnitude >= 5000 then
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7859.09814, 5544.19043, -381.476196))
-end
-    elseif SelectMaterial == "Leather" then
-        if First_Sea then
-            MMon = "Brute"
-            MPos = CFrame.new(-1145,15,4350)
-            SP = "Default"
-    elseif Second_Sea then
-            MMon = "Marine Captain"
-            MPos = CFrame.new(-2010.5059814453125, 73.00115966796875, -3326.620849609375)
-            SP = "Default"
-    elseif Third_Sea then
-            MMon = "Jungle Pirate"
-            MPos = CFrame.new(-11975.78515625, 331.7734069824219, -10620.0302734375)
-            SP = "Default"
         end
-    elseif SelectMaterial == "Scrap Metal" then
-        if First_Sea then
-            MMon = "Brute"
-            MPos = CFrame.new(-1145,15,4350)
-            SP = "Default"
-    elseif Second_Sea then
-            MMon = "Swan Pirate"
-            MPos = CFrame.new(878,122,1235)
-            SP = "Default"
-    elseif Third_Sea then
-            MMon = "Jungle Pirate"
-            MPos = CFrame.new(-12107,332,-10549)
-            SP = "Default"
     end
-    elseif SelectMaterial == "Fish Tail" then
-        if Third_Sea then
-            MMon = "Fishman Raider"
-            MPos = CFrame.new(-10993,332,-8940)
-            SP = "Default"
-    elseif First_Sea then
-            MMon = "Fishman Warrior"
-            MPos = CFrame.new(61123,19,1569)
-            SP = "Default"
-            if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(61163.8515625, 5.342342376708984, 1819.7841796875)).Magnitude >= 17000 then
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 5.342342376708984, 1819.7841796875))
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
     end
-end
-    elseif SelectMaterial == "Demonic Wisp" then
-        MMon = "Demonic Soul"
-        MPos = CFrame.new(-9507,172,6158)
-        SP = "Default"
-    elseif SelectMaterial == "Vampire Fang" then
-        MMon = "Vampire"
-        MPos = CFrame.new(-6033,7,-1317)
-        SP = "Default"
-    elseif SelectMaterial == "Conjured Cocoa" then
-        MMon = "Chocolate Bar Battler"
-        MPos = CFrame.new(620.6344604492188,78.93644714355469, -12581.369140625)
-        SP = "Default"
-    elseif SelectMaterial == "Dragon Scale" then
-        MMon = "Dragon Crew Archer"
-        MPos = CFrame.new(6594,383,139)
-        SP = "Default"
-    elseif SelectMaterial == "Gunpowder" then
-        MMon = "Pistol Billionaire"
-        MPos = CFrame.new(-469,74,5904)
-        SP = "Default"
-    elseif SelectMaterial == "Mini Tusk" then
-        MMon = "Mythological Pirate"
-        MPos = CFrame.new(-13545,470,-6917)
-        SP = "Default"
-    end
-end
-
-
--------------------------------------// ESP \\--------------------------------------------------------------------------------------------------------------------------------------------
+    Teleport()
+end       
 
 function UpdateIslandESP() 
     for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
@@ -2288,16 +1661,6 @@ function fly()
     start()
 end
 
-function UnEquipWeapon(Weapon)
-    if game.Players.LocalPlayer.Character:FindFirstChild(Weapon) then
-        _G.NotAutoEquip = true
-        wait(.5)
-        game.Players.LocalPlayer.Character:FindFirstChild(Weapon).Parent = game.Players.LocalPlayer.Backpack
-        wait(.1)
-        _G.NotAutoEquip = false
-    end
-end
-
 function Click()
     wait(.1)
     game:GetService'VirtualUser':CaptureController()
@@ -2310,6 +1673,15 @@ function AutoHaki()
     end
 end
 
+function UnEquipWeapon(Weapon)
+    if game.Players.LocalPlayer.Character:FindFirstChild(Weapon) then
+        _G.NotAutoEquip = true
+        wait(.5)
+        game.Players.LocalPlayer.Character:FindFirstChild(Weapon).Parent = game.Players.LocalPlayer.Backpack
+        wait(.1)
+        _G.NotAutoEquip = false
+    end
+end
 
 function EquipWeapon(ToolSe)
     if not _G.NotAutoEquip then
@@ -2686,7 +2058,6 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
     game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-
 function CheckItem(ah)
     for k, v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")) do
         if v.Name == ah then
@@ -2694,8 +2065,6 @@ function CheckItem(ah)
         end
     end
 end
-
---------------------------------------------------------------------------------------------------------------------------------------------
 
 function CheckSea(e)
     if game.PlaceId == 2753915549 then
@@ -2717,16 +2086,30 @@ w = task.wait
 t = task
 
 TempleOfTimeCFrame =
-CFrame.new(28734.3945, 14888.2324, -109.071777, -0.650207579, 4.1780531e-08, -0.759756625, 1.97876595e-08, 1, 3.80575109e-08, 0.759756625, 9.71147784e-09, -0.650207579)
+CFrame.new(
+28734.3945,
+14888.2324,
+-109.071777,
+-0.650207579,
+4.1780531e-08,
+-0.759756625,
+1.97876595e-08,
+1,
+3.80575109e-08,
+0.759756625,
+9.71147784e-09,
+-0.650207579
+)
 
-spawn(function()
-    while task.wait() do
-        if _G.AutoDooHee then
-            MoveCamtoMoon()
+spawn(
+        function()
+            while task.wait() do
+                if _G.AutoDooHee then
+                    MoveCamtoMoon()
+                end
             end
         end
-    end)
-
+    )
     Memayto = false
     DaGatCan = false
     if game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CheckTempleDoor") then
@@ -2734,9 +2117,35 @@ spawn(function()
     end
     function PullLever()
         local bn =
-            CFrame.new(28576.4688, 14939.2832,76.5164413, -1, 0, 0, 0, 0.707134247, -0.707079291, -0, -0.707079291, -0.707134247)
+            CFrame.new(
+            28576.4688,
+            14939.2832,
+            76.5164413,
+            -1,
+            0,
+            0,
+            0,
+            0.707134247,
+            -0.707079291,
+            -0,
+            -0.707079291,
+            -0.707134247
+        )
         local bo =
-            CFrame.new(28576.4688, 14935.9512, 75.469101, -1, -4.22219593e-08, 1.13133396e-08, 0,  -0.258819044, -0.965925813, 4.37113883e-08,  -0.965925813, 0.258819044)
+            CFrame.new(
+            28576.4688,
+            14935.9512,
+            75.469101,
+            -1,
+            -4.22219593e-08,
+            1.13133396e-08,
+            0,
+            -0.258819044,
+            -0.965925813,
+            4.37113883e-08,
+            -0.965925813,
+            0.258819044
+        )
         local bp = 0.2
         if
             game:GetService("Workspace").Map["Temple of Time"].Lever.Lever.CFrame.Z > bo.Z + bp or
@@ -2827,7 +2236,7 @@ function TweenTempleLegit()
 				cofullmoonkothangbeo = "Next Night"
 			end
 		end
-		return cofullmoonko
+		return cofullmoonkothangbeo
 	end
 	function getBlueGear()
 		if game.workspace.Map:FindFirstChild("MysticIsland") then
@@ -2961,12 +2370,12 @@ local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 CamShake:Stop()
 
     HttpService = game:GetService("HttpService")
-    local i = "Nano Hub"
+    local i = "Night Hub"
     local j = "-BloxFruit.json"
     local l = game.Players.LocalPlayer.Name .. j
     if Adel then
         HttpService = game:GetService("HttpService")
-        local i = "Nano Hub"
+        local i = "Night Hub"
         local j = "-BloxFruit.json"
         local l = game.Players.LocalPlayer.Name .. j
     end
@@ -3019,15 +2428,15 @@ CamShake:Stop()
         moon2 = "http://www.roblox.com/asset/?id=9709139597"
         moon1 = "http://www.roblox.com/asset/?id=9709135895"
         moonreal = MoonTextureId()
-        cofullmoonko = "Bad Moon"
+        cofullmoonkothangbeo = "Bad Moon"
         if moonreal == moon5 or moonreal == moon4 then
             if moonreal == moon5 then
-                cofullmoonko = "Full Moon"
+                cofullmoonkothangbeo = "Full Moon"
             elseif moonreal == moon4 then
-                cofullmoonko = "Next Night"
+                cofullmoonkothangbeo = "Next Night"
             end
         end
-        return cofullmoonko
+        return cofullmoonkothangbeo
     end
 
     function function7()
@@ -3121,56 +2530,400 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Hi anh em<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Sau Vài ngày chìm nghỉm<Color=/>"):Display()
     wait(.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Đây và Hub của Hayato<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Thì Night Hub đã trở lại!!!!!<Color=/>"):Display()
     wait(.14)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
     wait(.24)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia disocrd để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
     wait(.29)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Name : Hayato <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Channel : LMNGAMING <Color=/>"):Display()
     wait(.36)
 end)
 
---------------------------------------------------------------------------------------------------------------------------------------------
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Night Hub", HidePremium = false, IntroText = "NightHub Library", SaveConfig = true, ConfigFolder = "Night Hub"})
+
+OrionLib:MakeNotification({
+	Name = "Night Hub",
+	Content = "Choose Teams Bro?",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+OrionLib:MakeNotification({
+	Name = "Night Hub",
+	Content = "Night Hub Not Skidder, Please don't says",
+	Image = "rbxassetid://4483345998",
+	Time = 25
+})
+
+OrionLib:MakeNotification({
+    Name = "Night Hub",
+    Content = "Please Wait loading script...,Do not enable any function",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+-------------Tab-----------------------
+
+local W = Window:MakeTab({
+    Name = "👋 Welcome",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local M = Window:MakeTab({
+    Name = "🏠 General",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local ST = Window:MakeTab({
+    Name = "🛠️ Setting",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local IQ = Window:MakeTab({
+    Name = "⚔️ Item & Quest",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local S = Window:MakeTab({
+    Name = "📊 Stats",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local E = Window:MakeTab({
+    Name = "🔎 ESP",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local RA = Window:MakeTab({
+    Name = "🎆 Raid",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local LC = Window:MakeTab({
+    Name = "🙆‍♂️ Local Players",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Wld = Window:MakeTab({
+    Name = "🌍 World Teleport",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local SV = Window:MakeTab({
+    Name = "📈 Status Sever",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local D = Window:MakeTab({
+    Name = "🍍 Devil Fruit",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local R = Window:MakeTab({
+    Name = "☣️ Race V4",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local SH = Window:MakeTab({
+    Name = "🛒 Shop",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local C = Window:MakeTab({
+    Name = "🔰 Misc",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-----Label--------------------
+local Section = W:AddSection({
+    Name = "Credit"
+})
+
+
+W:AddLabel("Script By LMNGAMING")
+
+local Section = W:AddSection({
+    Name = "Update"
+})
+
+W:AddLabel("[+] Night Hub is back!")
+W:AddLabel("[+] I Not Skidder!")
+W:AddLabel("[+] I Will overcome Hirimii,MTriet Hub!!!")
+W:AddLabel("[+] Load Script Faster!")
+
+local Section = W:AddSection({
+    Name = "Status"
+})
+
+local locallv = W:AddLabel("Level")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                locallv:Set("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
+            end)
+        end
+    end)
+    
+    local localrace = W:AddLabel("Race")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                localrace:Set("Race :".." "..game:GetService("Players").LocalPlayer.Data.Race.Value)
+            end)
+        end
+    end)
+    
+    local localbeli = W:AddLabel("Beli")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                localbeli:Set("Beli :".." "..game:GetService("Players").LocalPlayer.Data.Beli.Value)
+            end)
+        end
+    end)
+    
+    local localfrag = W:AddLabel("Fragment")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                localfrag:Set("Fragments :".." "..game:GetService("Players").LocalPlayer.Data.Fragments.Value)
+            end)
+        end
+    end)
+    
+    
+    local localexp = W:AddLabel("ExP")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                localexp:Set("ExP Points :".." "..game:GetService("Players").LocalPlayer.Data.Exp.Value)
+            end)
+        end
+    end)
+    
+    local localstat = W:AddLabel("Stats Points")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                localstat:Set("Stats Points :".." "..game:GetService("Players").LocalPlayer.Data.Points.Value)
+            end)
+        end
+    end)
+    
+    local localbountyhornor = W:AddLabel("Bounty")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                localbountyhornor:Set("Bounty / Honor :".." "..game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value)
+            end)
+        end
+    end)
+    
+    local localDevil = W:AddLabel("Devil Fruit")
+    
+    spawn(function()
+        while wait() do
+            pcall(function()
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value) or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value) then
+                    localDevil:Set("Devil Fruit :".." "..game:GetService("Players").LocalPlayer.Data.DevilFruit.Value)
+                else
+                    localDevil:Set("Not Have Devil Fruit")
+                end
+            end)
+        end
+    end)
+
+    local Section = W:AddSection({
+        Name = "Status Hack"
+    })
+    
+    local LevelFarmFarm W:AddLabel("Kaitun : Đell có(sắp có)")
+    W:AddLabel("Config Save : Comming Son...")
+    local Farmfast = W:AddLabel("Farm Fast : ❌")
+    local Bypass = W:AddLabel("Bypass ❌")
+    local Section = W:AddSection({
+        Name = "World"
+    })
+    local WolrdSet3 = W:AddLabel("World 1 ❌ ")
+    local WolrdSet = W:AddLabel("Wolrd : 2 ❌")
+    local WolrdSet1 = W:AddLabel("Wolrd : 3 ❌")
+    local Section = W:AddSection({
+        Name = "Stats Point"
+    })
+    local StastMelee = W:AddLabel("")
+    local StastDefense = W:AddLabel("")
+    local StastSword = W:AddLabel("")
+    local StastGun = W:AddLabel("")
+    local StastDevilFruit = W:AddLabel("")
+    local PointsStast = W:AddLabel("")
+    local Section = W:AddSection({
+        Name = "Melee Check"
+    })
+    local  Superhuman =             W:AddLabel("❌ : Superhuman")
+    local  DeathStep =              W:AddLabel("❌ : Sharkman Karate")
+    local  ElectricClaw =             W:AddLabel("❌ : Electric Claw")
+    local  DragonTalon =             W:AddLabel("❌ : Dragon Talon")
+    local   GodHuman =            W:AddLabel("❌ : God Human")
+    local Section = W:AddSection({
+        Name = "Sword Legend Check"
+    })
+    local   Shisui =            W:AddLabel("❌ : Shisui")
+    local     Saddi =           W:AddLabel("❌ : Saddi")
+    local      Wando =         W:AddLabel("❌ : Wando")
+    local     TrueTripleKatana          W:AddLabel("❌ : True Triple Katana")
+    local Section = W:AddSection({
+        Name = "World 1 Weapon"
+    })
+    local   Saber  = W:AddLabel("❌ : Saber")
+    local Section = W:AddSection({
+        Name = "World 2 Weapon"
+    })
+    local       Rengoku =         W:AddLabel("❌ : Rengoku")
+    local    MidnightBlade =            W:AddLabel("❌ : Midnight Blade")
+    local       DragonTrident =        W:AddLabel("❌ : DragonTrident")
+    local Section = W:AddSection({
+        Name = "World 3 Weapon"
+    })
+    local     Yama =          W:AddLabel("❌ : Yama")
+    local        BuddySword =        W:AddLabel("❌ : Buddy Sword")
+    local       Canvander =        W:AddLabel("❌ : Canvander")
+    local      TwinHooks =         W:AddLabel("❌ : Twin Hooks")
+    local     SpikeyTrident =          W:AddLabel("❌ : Spikey Trident")
+    local   HallowScythe =            W:AddLabel("❌ : Hallow Scythe")
+    local     DarkDagger =           W:AddLabel("❌ : Dark Dagger")
+    local     Tushita          W:AddLabel("❌ : Tushita")
+    local Section = W:AddSection({
+        Name = "Gun"
+    })
+    local   Kabucha =            W:AddLabel("❌ : Kabucha")
+    local   AcidumRifle =             W:AddLabel("❌ : Acidum Rifle")
+    local    BizarreRifle =            W:AddLabel("❌ : Bizarre Rifle")
+    local Section = W:AddSection({
+        Name = "Quest"
+    })
+    local   BartiloQuest =            W:AddLabel("❌ : Bartilo Quest")
+    local   DonSwanQuest =             W:AddLabel("❌ : Don Swan Quest")
+    local    KillDonSwan =           W:AddLabel("❌ : Kill Don Swan")
+
+
+local Section = W:AddSection({
+    Name = "Acessory"
+})
+
+
+local Dark_Coat = W:AddLabel("❌: Dark Coat")
+local Ghoul_Mask = W:AddLabel("❌: Ghoul Mask")
+local Swan_Glass = W:AddLabel("❌: Swan Glass")
+local Pale_Scarf = W:AddLabel("❌: Pale Scarf")
+local Valkyrie_Helm = W:AddLabel("❌: Valkyrie Helm")
+
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
+                if v.Name == "Saber" then
+                    Dark_Coat:Set("✅: Dark Coat")
+                end
+                if v.Name == "Ghoul Mask" then
+                    Ghoul_Mask:Set("✅: Ghoul Mask")
+                end
+                if v.Name == "Swan Glasses" then
+                    Swan_Glass:Set("✅: Swan Glass")
+                end
+                if v.Name == "Pale Scarf" then
+                    Pale_Scarf:Set("✅: Pale Scarf")
+                end
+                if v.Name == "Valkyrie Helmet" then
+                    Valkyrie_Helm:Set("✅: Valkyrie Helmet")
+                end
+            end
+        end)
+    end
+end)
 
 local Section = M:AddSection({
-	Name = "Select Weapon"
+    Name = "Select Weapon"
 })
 
+M:AddParagraph("Select Weapon","Please Select Weapon")
+
+local WeaponList = {"Melee","Sword","Fruit","Gun"}
+_G.SelectWeapon = "Melee"
 M:AddDropdown({
-	Name = "Select Weapon",
-	Default = "Melee",
-	Options = {"Melee", "Sword"},
-	Callback = function(Value)
-		SelectWP = Value
-	end    
+    Name = "Select Weapon",
+    Default = "",
+    Options = WeaponList,
+    Flag = "Select Weapon",
+    Save = true,
+    Callback = function(Value)
+        _G.SelectWeapon = Value
+    end    
 })
-
 task.spawn(function()
     while wait() do
         pcall(function()
-            if SelectWP == "Melee" then
+            if _G.SelectWeapon == "Melee" then
                 for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                     if v.ToolTip == "Melee" then
                         if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                            SelectWP = v.Name
+                            _G.SelectWeapon = v.Name
                         end
                     end
                 end
-            elseif SelectWP == "Sword" then
+            elseif _G.SelectWeapon == "Sword" then
                 for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                     if v.ToolTip == "Sword" then
                         if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                            SelectWP = v.Name
+                            _G.SelectWeapon = v.Name
+                        end
+                    end
+                end
+            elseif _G.SelectWeapon == "Gun" then
+                for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                    if v.ToolTip == "Gun" then
+                        if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                            _G.SelectWeapon = v.Name
+                        end
+                    end
+                end
+            elseif _G.SelectWeapon == "Fruit" then
+                for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                    if v.ToolTip == "Blox Fruit" then
+                        if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                            _G.SelectWeapon = v.Name
                         end
                     end
                 end
             end
         end)
     end
-end)
+    end)
 
 if World2 and World1 then
     local Section = M:AddSection({
@@ -3229,54 +2982,57 @@ if World2 and World1 then
     })
 end
 
-local Section = M:AddSection({
-    Name = "Other Farm"
-})
+    local Section = M:AddSection({
+        Name = "Other Farm"
+    })
 
-M:AddParagraph("Redeem Code","Click to Button to Reddem All Code In Blox Fruits.")
+    M:AddParagraph("Redeem Code","Click to Button to Reddem All Code In Blox Fruits.")
 
-local x2Code = {
-    "JULYUPDATE_RESET",
-    "staffbattle",
-    "Sub2CaptainMaui",
-    "SUB2GAMERROBOT_RESET1",
-    "KittGaming",
-    "Sub2Fer999",
-    "Enyu_is_Pro",
-    "Magicbus",
-    "ENYU_IS_PRO",
-    "FUDD10",
-    "BIGNEWS",
-    "THEGREATACE",
-    "SUB2GAMERROBOT_EXP1",
-    "STRAWHATMAIME",
-    "SUB2OFFICIALNOOBIE",
-    "SUB2NOOBMASTER123",
-    "SUB2DAIGROCK",
-    "AXIORE",
-    "TANTAIGAMIMG",
-    "STRAWHATMAINE",
-    "JCWK",
-    "FUDD10_V2",
-    "SUB2FER999",
-    "MAGICBIS",
-    "TY_FOR_WATCHING",
-    "STARCODEHEO"
-}
+    local x2Code = {
+        "JULYUPDATE_RESET",
+        "staffbattle",
+        "Sub2CaptainMaui",
+        "SUB2GAMERROBOT_RESET1",
+        "KittGaming",
+        "Sub2Fer999",
+        "Enyu_is_Pro",
+        "Magicbus",
+        "ENYU_IS_PRO",
+        "FUDD10",
+        "BIGNEWS",
+        "THEGREATACE",
+        "SUB2GAMERROBOT_EXP1",
+        "STRAWHATMAIME",
+        "SUB2OFFICIALNOOBIE",
+        "SUB2NOOBMASTER123",
+        "SUB2DAIGROCK",
+        "AXIORE",
+        "TANTAIGAMIMG",
+        "STRAWHATMAINE",
+        "JCWK",
+        "FUDD10_V2",
+        "SUB2FER999",
+        "MAGICBIS",
+        "TY_FOR_WATCHING",
+        "STARCODEHEO"
+    }
+    
+    
+    
+    M:AddButton({
+        Name = "Redeem all code",
+        Callback = function()
+            function RedeemCode(value)
+                game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
+            end
+            for i,v in pairs(x2Code) do
+                RedeemCode(v)
+            end
+          end    
+    })
 
 
-
-M:AddButton({
-    Name = "Redeem all code",
-    Callback = function()
-        function RedeemCode(value)
-            game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
-        end
-        for i,v in pairs(x2Code) do
-            RedeemCode(v)
-        end
-      end    
-})
+    
 
 local Section = M:AddSection({
     Name = "Mastery Menu"
@@ -3380,11 +3136,11 @@ M:AddToggle({
         end    
     })
 
-local Section = Se:AddSection({
-    Name = "Bring Mob"
-})
+    local Section = M:AddSection({
+        Name = "Bring Mob"
+    })
 
-Se:AddToggle({
+M:AddToggle({
     Name = "Bring Mobs[Fix]",
     Default = true,
     Flag = "Bring Mobs",
@@ -3422,11 +3178,11 @@ spawn(function()
     end
 end)
 
-local Section = Se:AddSection({
+local Section = M:AddSection({
     Name = "FastAttack :"
 })
 
-Se:AddToggle({
+M:AddToggle({
     Name = "FastAttack",
     Default = true,
     Flag = "FastAttack",
@@ -3469,7 +3225,7 @@ spawn(function()
 end)
 
 local AttackList = {"0", "0.1", "0.175", "0.2", "0.25", "0.3", "0.35", "0.4", "0.45", "0.5", "0.55", "0.6", "0.65", "0.7", "0.75", "0.8", "0.85", "0.9", "0.95", "0.1"}
-Se:AddDropdown({
+M:AddDropdown({
 	Name = "FastAttack Delay",
 	Default = "0.5",
 	Options = AttackList,
@@ -3529,11 +3285,11 @@ spawn(function()
     end
 end)
 
-local Section = Se:AddSection({
+local Section = M:AddSection({
     Name = "Bypass Teleport"
 })
 
-Se:AddToggle({
+M:AddToggle({
     Name = "Bypass TP[BETA]",
     Default = false,
     Flag = "Bypass TP",
@@ -3544,12 +3300,12 @@ Se:AddToggle({
 })
 
 
-local Section = Se:AddSection({
+local Section = M:AddSection({
     Name = "Distance Mobs"
 })
 
 PosY = 30
-Se:AddSlider({
+M:AddSlider({
     Name = "Distance Mob",
     Min = 0,
     Max = 65,
@@ -3565,11 +3321,11 @@ Se:AddSlider({
     end    
 })
 
-local Section = Se:AddSection({
+local Section = M:AddSection({
     Name = "Farm Fast : Lv 10 => 120"
 })
 
-Farmfasttoggle = Se:AddToggle({
+Farmfasttoggle = M:AddToggle({
     Name = "Auto Farm Fast",
     Default = false,
     Flag = "Farm Fast",
@@ -3580,7 +3336,37 @@ Farmfasttoggle = Se:AddToggle({
     end    
 })
 
-Se:AddToggle({
+local Section = M:AddSection({
+    Name = "Kaitun Met Vaiz"
+})
+
+M:AddParagraph("Kaitun/Cantay","Kaitun bản này đell khác gì bản kia.")
+
+M:AddToggle({
+    Name = "Kaitun[Ko có kill players]",
+    Default = false,
+    Flag = "Kaitun",
+    Save = true,
+    Callback = function(Value)
+        _G.RedeemCode = Value
+        _G.AutoFarm = Value
+        _G.Farmfast = Value
+       _G.SelectWeapon = "Combat"
+       _G.AutoPlayerHunter = Value
+       _G.Auto_Stats_Kaitun = Value
+       _G.Auto_Saber = Value
+       _G.AutoSuperhuman = Value
+       _G.AutoBartilo = Value
+       _G.AutoBuyLegendarySword = Value
+       _G.BuyAllAib = Value
+       StopTween(_G.AutoFarm)
+       StopTween(_G.Hunter)
+       StopTween(_G.Farmfast)
+       StopTween(_G.Auto_Saber)
+    end    
+})
+
+M:AddToggle({
     Name = "Auto Click[Kick]",
     Default = false,
     Flag = "Auto Click",
@@ -3616,7 +3402,7 @@ spawn(function()
     end
 end)
 
-local Section = M:AddSection({
+   local Section = M:AddSection({
     Name = "Mob & Boss Farm"
 })
 
@@ -3945,7 +3731,7 @@ M:AddParagraph("Auto Farm Boss :","Chờ Update thôi ae!!!")
         end    
     })
 
-    Se:AddToggle({
+    ST:AddToggle({
         Name = "Auto Haki",
         Default = true,
         Callback = function(Value)
@@ -3965,7 +3751,7 @@ M:AddParagraph("Auto Farm Boss :","Chờ Update thôi ae!!!")
         end
     end)
 
-    Se:AddToggle({
+    ST:AddToggle({
         Name = "Anti Afk",
         Default = true,
         Callback = function(Value)
@@ -3980,7 +3766,7 @@ M:AddParagraph("Auto Farm Boss :","Chờ Update thôi ae!!!")
         end    
     })
 
-    Se:AddToggle({
+    ST:AddToggle({
         Name = "White screen",
         Default = false,
         Flag = "White screen",
@@ -4014,7 +3800,7 @@ elseif _G.WhiteScreen == false then
     
     CheckAntiCheatBypass()
     
-    Se:AddToggle({
+    ST:AddToggle({
         Name = "Antiban",
         Default = true,
         Callback = function(Value)
@@ -4344,7 +4130,7 @@ IQ:AddToggle({
             Name = "ArenaTrainer"
         })
 
-        IQ:AddLabel("Tự động đánh hình nộm")
+        IQ:AddLabel("Cho thằng nào đell hiểu thì đây là tự động đánh hình nộm")
 
         IQ:AddToggle({
             Name = "Automatically hit the dummy",
@@ -4655,9 +4441,17 @@ local Fruit = S:AddLabel("Fruit : ")
         end
     end)
 
+S:AddToggle({
+    Name = "Auto Stats Kaitun",
+    Default = false,
+    Flag = "Auto Kaitun",
+    Save = true,
+    Callback = function(Value)
+        _G.Auto_Stats_Kaitun = Value
+    end    
+})
 
-
-Se:AddToggle({
+S:AddToggle({
     Name = "Melee",
     Default = false,
     Flag = "Auto Melee",
@@ -4667,7 +4461,7 @@ Se:AddToggle({
     end    
 })
 
-Se:AddToggle({
+S:AddToggle({
     Name = "Defense",
     Default = false,
     Flag = "Auto Defense",
@@ -4677,7 +4471,7 @@ Se:AddToggle({
     end    
 })
 
-Sec:AddToggle({
+S:AddToggle({
     Name = "Sword",
     Default = false,
     Flag = "Auto Sword",
@@ -4687,7 +4481,7 @@ Sec:AddToggle({
     end    
 })
 
-Se:AddToggle({
+S:AddToggle({
     Name = "Gun",
     Default = false,
     Flag = "Auto Gun",
@@ -4697,7 +4491,7 @@ Se:AddToggle({
     end    
 })
 
-Se:AddToggle({
+S:AddToggle({
     Name = "Devil Fruit",
     Default = false,
     Flag = "Auto Fruit",
@@ -4708,7 +4502,7 @@ Se:AddToggle({
 })
 
 PointStats = 1
-Se:AddSlider({
+S:AddSlider({
     Name = "Point",
     Min = 1,
     Max = 2450,
@@ -5071,13 +4865,13 @@ RA:AddToggle({
     end    
 })
 
-local Section = T:AddSection({
+local Section = LC:AddSection({
     Name = "Teleport Island"
 })
 
 
 if World1 then
-T:AddDropdown({
+LC:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"WindMill",
@@ -5107,7 +4901,7 @@ T:AddDropdown({
 end
 
 if World2 then
-T:AddDropdown({
+LC:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"The Cafe",
@@ -5135,7 +4929,7 @@ T:AddDropdown({
 end
 
 if World3 then
-T:AddDropdown({
+LC:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"Mansion",
@@ -5160,7 +4954,7 @@ T:AddDropdown({
 })
 end
 
-T:AddToggle({
+LC:AddToggle({
     Name = "Teleport To Island",
     Default = false,
     Callback = function(Value)
@@ -5273,7 +5067,7 @@ T:AddToggle({
     end    
 })
 
-local Section = T:AddSection({
+local Section = LC:AddSection({
     Name = "Teleport NPC"
 })
 
@@ -5326,7 +5120,7 @@ NPC3 = {
 }
 
 if World1 then
-T:AddDropdown({
+LC:AddDropdown({
 	Name = "Select NPC",
 	Default = "",
 	Options = NPC1,
@@ -5338,7 +5132,7 @@ T:AddDropdown({
 })
 end
 if World2 then
-    T:AddDropdown({
+    LC:AddDropdown({
         Name = "Select NPC",
         Default = "",
         Options = NPC2,
@@ -5350,7 +5144,7 @@ if World2 then
     })
 end
     if World3 then
-        T:AddDropdown({
+        LC:AddDropdown({
             Name = "Select NPC",
             Default = "",
             Options = NPC3,
@@ -5362,7 +5156,7 @@ end
         })
     end
 
-        T:AddToggle({
+        LC:AddToggle({
             Name = "Teleport To NPC",
             Default = false,
             Callback = function(Value)
@@ -5456,11 +5250,11 @@ end
             end    
         })
 
-        local Section = T:AddSection({
+        local Section = LC:AddSection({
             Name = "Teleport SeSeabeast"
         })
 
-T:AddToggle({
+LC:AddToggle({
     Name = "Teleport to Seabeast",
     Default = false,
     Flag = "Teleport to Seabeast",
@@ -5474,11 +5268,11 @@ T:AddToggle({
     end    
 })
 
-local Section = T:AddSection({
+local Section = LC:AddSection({
     Name = "Teleport Mirrage"
 })
 
-Se:AddButton({
+LC:AddButton({
     Name = "Revome Frog",
     Callback = function()
         game:GetService("Lighting").LightingLayers:Destroy()
@@ -5486,7 +5280,7 @@ Se:AddButton({
       end    
 })
 
-T:AddToggle({
+LC:AddToggle({
     Name = "Teleport To Mirage Island",
     Default = false,
     Flag = "Teleport to Mirage",
@@ -5497,7 +5291,7 @@ T:AddToggle({
     end    
 })
 
-local Section = T:AddSection({
+local Section = LC:AddSection({
     Name = "Players"
 })
 
@@ -5523,7 +5317,7 @@ Playerslist = {}
         table.insert(Playerslist,v.Name)
     end
     
-local SelectedPly = T:AddDropdown({
+local SelectedPly = LC:AddDropdown({
     Name = "Select Players",
     Default = "",
     Options = Playerslist,
@@ -5532,7 +5326,7 @@ local SelectedPly = T:AddDropdown({
     end    
 })
 
-T:AddButton({
+LC:AddButton({
     Name = "Refresh Players",
     Callback = function()
         NewPlayerList = {}
@@ -5543,7 +5337,7 @@ T:AddButton({
       end     
 })
 
-T:AddToggle({
+LC:AddToggle({
     Name = "Teleport To Players",
     Default = false,
     Callback = function(Value)
@@ -5558,7 +5352,7 @@ T:AddToggle({
 })
 
 
-T:AddToggle({
+LC:AddToggle({
     Name = "Auto Kill Players",
     Default = false,
     Callback = function(Value)
@@ -5567,11 +5361,11 @@ T:AddToggle({
     end    
 })
 
-local Section = T:AddSection({
+local Section = LC:AddSection({
     Name = "AimBot"
 })
 
-T:AddToggle({
+LC:AddToggle({
     Name = "AimBot",
     Default = false,
     Callback = function(Value)
@@ -5583,7 +5377,7 @@ T:AddToggle({
 
 
 
-T:AddToggle({
+LC:AddToggle({
     Name = "Aimbot Skill Nearest",
     Default = false,
     Flag = "Aimbot Skill Nearest",
@@ -5593,40 +5387,40 @@ T:AddToggle({
     end    
 })
 
-local Section = M:AddSection({
+local Section = Wld:AddSection({
     Name = "World Menu"
 })
 
-M:AddButton({
+Wld:AddButton({
     Name = "Old World",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
       end    
 })
 
-M:AddButton({
+Wld:AddButton({
     Name = "Second World",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
       end    
 })
 
-M:AddButton({
+Wld:AddButton({
     Name = "Third World",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
       end    
 })
 
-local Section = S:AddSection({
+local Section = SV:AddSection({
     Name = "FullMoon Check"
 })
 
-local FM = S:AddLabel("Server Time : " .. function8() .. " | ".. CheckMoon() .. " | " .. function7())
+local FM = SV:AddLabel("Server Time : " .. function8() .. " | ".. CheckMoon() .. " | " .. function7())
 
 spawn(function()
         while wait() do
-            M:Set("Server Time : " .. function8() .. " | ".. CheckMoon() .. " | " .. function7())
+            SV:Set("Server Time : " .. function8() .. " | ".. CheckMoon() .. " | " .. function7())
                 end
             end)
 
@@ -5636,7 +5430,7 @@ spawn(function()
 
             local bL = SV:AddLabel("Anclient One Status : " .. tostring(CheckAcientOneStatus()))
 
-local Section = S:AddSection({
+local Section = SV:AddSection({
     Name = "Elite Check"
 })
 
@@ -5655,11 +5449,11 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
             end
         end)
 
-        local Section = S:AddSection({
+        local Section = SV:AddSection({
             Name = "Elite Hunter"
         })
 
-        local EliteProgress = S:AddLabel("")
+        local EliteProgress = SV:AddLabel("")
     
         spawn(function()
             pcall(function()
@@ -5669,7 +5463,7 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
             end)
         end)
     
-        local Section = S:AddSection({
+        local Section = SV:AddSection({
             Name = "Mirage Check"
         })
 
@@ -5686,13 +5480,13 @@ local Elite_Hunter_Status = SV:AddLabel("Only Third Sea")
     end)
 end
 
-Mirragecheck = S:AddLabel("Only Third Sea")
+Mirragecheck = SV:AddLabel("Only Third Sea")
 
-local Section = S:AddSection({
+local Section = SV:AddSection({
     Name = "Dough King Check"
 })
 
-local MobKilled = S:AddLabel("Only Third Sea")
+local MobKilled = SV:AddLabel("Only Third Sea")
 
 spawn(function()
     while wait() do
@@ -5710,11 +5504,11 @@ spawn(function()
     end
 end)
 
-local Section = RT:AddSection({
+local Section = SV:AddSection({
     Name = "Hop Find"
 })
 
-RT:AddToggle({
+SV:AddToggle({
 	Name = "Hop Find Moon 3/4 or 4/4",
 	Default = false,
     Flag = "FindFM",
@@ -5724,7 +5518,7 @@ RT:AddToggle({
 	end    
 })
 
-RT:AddToggle({
+SV:AddToggle({
 	Name = "Hop Find Mirrage",
 	Default = false,
     Flag = "FindMrg",
@@ -5735,11 +5529,11 @@ RT:AddToggle({
 })
 
 
-local Section = Se:AddSection({
+local Section = SV:AddSection({
     Name = "Misc Sever"
 })
 
-        Se:AddTextbox({
+        SV:AddTextbox({
             Name = "Job Id Placed",
             Default = "",
             TextDisappear = true,
@@ -5748,7 +5542,7 @@ local Section = Se:AddSection({
             end	  
         })
 
-        Se:AddButton({
+        SV:AddButton({
             Name = "Join Id",
             Callback = function()
                 _G.AutoRejoin = false
@@ -5756,14 +5550,14 @@ local Section = Se:AddSection({
               end    
         })
 
-        Se:AddButton({
+        SV:AddButton({
             Name = "Copy Job Id",
             Callback = function()
                 setclipboard(tostring(game.JobId))
               end    
             })
 
-        Se:AddButton({
+        SV:AddButton({
             Name = "Hop Sever",
             Callback = function()
                 _G.AutoRejoin = false
@@ -5771,14 +5565,14 @@ local Section = Se:AddSection({
               end    
         })
 
-        Se:AddButton({
+        SV:AddButton({
             Name = "Rejoin Sever",
             Callback = function()
                 game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
               end    
         })
 
-        Se:AddButton({
+        SV:AddButton({
             Name = "Hop Sever Low Players",
             Callback = function()
                 _G.AutoRejoin = false
@@ -5829,14 +5623,14 @@ local Section = Se:AddSection({
               end    
         })
 
-SH:AddButton({
+D:AddButton({
     Name = "Random Fruits",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
       end    
 })
 
-SH:AddToggle({
+D:AddToggle({
     Name = "Auto Random Fruits",
     Default = false,
     Flag = "Auto Random Fruits",
@@ -5894,7 +5688,7 @@ FruitList = {
     "Leopard-Leopard"
 }
 
-SH:AddToggle({
+D:AddToggle({
     Name = "Auto Store Fruits",
     Default = false,
     Flag = "Auto Store Fruits",
@@ -5933,7 +5727,7 @@ function DropFruit()
         end
     end)
 end
-SH:AddToggle({
+D:AddToggle({
     Name = "Teleport To Fruit Spawn",
     Default = false,
     Flag = "Teleport To Fruit Spawn",
@@ -5955,7 +5749,7 @@ spawn(function()
 	end
 end)
 
-SH:AddToggle({
+D:AddToggle({
     Name = "Auto Drop Fruit",
     Default = false,
     Flag = "Auto Drop Fruit",
@@ -5995,7 +5789,7 @@ spawn(function()
     end
 end)
 
-SH:AddToggle({
+D:AddToggle({
     Name = "Bring All Fruit[75% Kick]",
     Default = false,
     Flag = "Bring All Fruit[75% Kick]",
@@ -6018,11 +5812,11 @@ spawn(function()
     end
 end)
 
-local Section = RT:AddSection({
+local Section = R:AddSection({
 	Name = "Race v2"
 })
 
-RT:AddToggle({
+R:AddToggle({
 	Name = "Auto Race(V1 - V2 - V3)",
 	Default = false,
     Flag = "Auto Race",
@@ -6032,11 +5826,11 @@ RT:AddToggle({
 	end    
 })
 
-local Section = RT:AddSection({
+local Section = R:AddSection({
 	Name = "Pull Lever"
 })
 
-AutoPullLever = RT:AddToggle({
+AutoPullLever = R:AddToggle({
     Name = "Auto Pull Lever",
     Default = false,
     Flag = "Auto Pull Lever",
@@ -6047,7 +5841,7 @@ AutoPullLever = RT:AddToggle({
     end    
 })
 
-RT:AddToggle({
+R:AddToggle({
     Name = "Auto Turn On Race v3",
     Default = false,
     Flag = "Auto Turn On Race v3",
@@ -6067,7 +5861,7 @@ spawn(function()
         end)
     end
 end)
-RT:AddToggle({
+R:AddToggle({
     Name = "Auto Turn On Race v4",
     Default = false,
     Flag = "Auto Turn On Race v4",
@@ -6088,7 +5882,9 @@ spawn(function()
     end
 end)
 
-MoveCamTooMoonToggle = RT:AddToggle({
+MoveCamTooMoonToggle = R:AddToggle({
+    Name = "Move Cam to Moon",
+    Default = false,
     Flag = "Move Cam to Moon",
     Save = true,
     Callback = function(Value)
@@ -6107,7 +5903,7 @@ spawn(function()
     end
 end)
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Gear",
     Callback = function()
         _G.TweenMGear = Value
@@ -6115,11 +5911,11 @@ RT:AddButton({
       end    
 })
 
-local Section = RT:AddSection({
+local Section = R:AddSection({
 	Name = "Race v4"
 })
 
-RT:AddToggle({
+R:AddToggle({
     Name = "Auto Buy Gear",
     Default = false,
     Flag = "Auto Buy Gear",
@@ -6148,7 +5944,7 @@ end
 end)  
 end)
 
-RT:AddToggle({
+R:AddToggle({
     Name = "Auto Train Race",
     Default = false,
     Flag = "Auto Train Race",
@@ -6161,32 +5957,32 @@ RT:AddToggle({
     end    
 })
 
-local Section = RT:AddSection({
+local Section = R:AddSection({
 	Name = "Temple Of Time"
 })
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Top On Great Tree",
     Callback = function()
         TweenTempleLegit()
       end    
 })
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Temple of Time",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
       end    
 })
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Lever Pull",
     Callback = function()
         PullLever()
       end    
 })
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Anclient One",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6196,7 +5992,7 @@ RT:AddButton({
       end    
 })
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Clock",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6206,7 +6002,7 @@ RT:AddButton({
       end    
 })
 
-RT:AddButton({
+R:AddButton({
     Name = "Teleport to Trials Doors",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6246,11 +6042,11 @@ RT:AddButton({
             end
 })
 
-local Section = RT:AddSection({
+local Section = R:AddSection({
     Name = "Other Trials"
 })
 
-RT:AddToggle({
+R:AddToggle({
     Name = "Auto Complete Trials",
     Default = false,
     Flag = "Auto Complete Trials",
@@ -6261,7 +6057,7 @@ RT:AddToggle({
     end    
 })
 
-RT:AddToggle({
+R:AddToggle({
     Name = "Auto Kill Players After Trials",
     Default = false,
     Flag = "KillTrials",
@@ -6585,7 +6381,7 @@ local Section = C:AddSection({
     Name = "Open Tab"
 })
 
-SH:AddButton({
+C:AddButton({
     Name = "Open Devil Fruit Shop",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
@@ -6593,7 +6389,7 @@ SH:AddButton({
       end    
 })
 
-SH:AddButton({
+C:AddButton({
     Name = "Open Inventory[Old]",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")
@@ -6602,7 +6398,7 @@ SH:AddButton({
       end    
 })
 
-SH:AddButton({
+C:AddButton({
     Name = "Title Tab",
     Callback = function()
         local args = {
@@ -6613,18 +6409,18 @@ SH:AddButton({
       end    
 })
 
-local Section = SH:AddSection({
+local Section = C:AddSection({
     Name = "Color Haki"
 })
 
-SH:AddButton({
+C:AddButton({
     Name = "Color Haki",
     Callback = function()
         game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
       end    
 })
 
-SH:AddToggle({
+C:AddToggle({
     Name = "Buy Haki Color(Random)",
     Default = false,
     Callback = function(Value)
@@ -6647,11 +6443,11 @@ spawn(function()
     end
 end)
 
-local Section = Se:AddSection({
+local Section = C:AddSection({
     Name = "Level Lock"
 })
 
-Se:AddToggle({
+C:AddToggle({
 	Name = "Lock Level",
 	Default = false,
     Flag = "Lock Level",
@@ -6663,7 +6459,7 @@ Se:AddToggle({
 
 LockLevelValue = 2450
 OldLevel = game.Players.localPlayer.Data.Level.Value
-Se:AddSlider({
+C:AddSlider({
 	Name = "Level To Lock",
 	Min = 1,
 	Max = 2550,
@@ -6702,11 +6498,11 @@ spawn(function()
     end)
 
 
-    local Section = Se:AddSection({
+    local Section = C:AddSection({
         Name = "Rejoin"
     })
 
-Se:AddToggle({
+C:AddToggle({
     Name = "Auto Rejoin",
     Default = false,
     Callback = function(Value)
@@ -6725,11 +6521,11 @@ spawn(function()
         end
     end)
 
-    local Section = Se:AddSection({
+    local Section = C:AddSection({
         Name = "Players"
     })
 
-    Se:AddToggle({
+    C:AddToggle({
         Name = "Walk On Water",
         Default = true,
         Callback = function(Value)
@@ -6748,11 +6544,11 @@ spawn(function()
         end
     end)
 
-    local Section = Se:AddSection({
+    local Section = C:AddSection({
         Name = "Misc Players"
     })
 
-    Se:AddToggle({
+    C:AddToggle({
         Name = "Infinity Soru",
         Default = false,
         Callback = function(Value)
@@ -6781,7 +6577,7 @@ spawn(function()
         end
     end)
 
-    Se:AddToggle({
+    C:AddToggle({
         Name = "No Clip",
         Default = false,
         Callback = function(Value)
@@ -6801,7 +6597,7 @@ spawn(function()
     end)
 
 
-Se:AddButton({
+C:AddButton({
     Name = "Remove Lava",
     Callback = function()
         for i,v in pairs(game.Workspace:GetDescendants()) do
@@ -6817,7 +6613,7 @@ Se:AddButton({
       end    
 })
 
-Se:AddToggle({
+C:AddToggle({
     Name = "Infinity Geppo",
     Default = false,
     Callback = function(Value)
@@ -8568,13 +8364,13 @@ pcall(function()
         if _G.AutoEliteHunter then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
                 OrionLib:MakeNotification({
-                    Name = "Nano Hub(Noitification)",
+                    Name = "Night Hub(Noitification)",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
                 })
                 OrionLib:MakeNotification({
-                    Name = "Nano Hub(Noitification)",
+                    Name = "Night Hub(Noitification)",
                     Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
@@ -8743,7 +8539,7 @@ spawn(function()
             if _G.AutoObservation then
                 if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                     OrionLib:MakeNotification({
-                        Name = "Nano HUB BOT",
+                        Name = "NIGHT HUB BOT",
                         Content = "!!You Are Max Point!!",
                         Image = "rbxassetid://14919714384",
                         Time = 5
@@ -8892,7 +8688,7 @@ spawn(function()
         if Mybeli <= 2500000 or MyFragment <= 5000 then
             wait(2.0)
             OrionLib:MakeNotification({
-                Name = "Nano Hub",
+                Name = "Night Hub",
                 Content = "You not have beli or fragment!",
                 Image = "rbxassetid://4483345998",
                 Time = 5
@@ -9053,7 +8849,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Nano HUB BOT",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Superhuman",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -9066,7 +8862,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Nano HUB BOT",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Death Step",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -9079,7 +8875,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Nano HUB BOT",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have SharkMan Karate",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -9092,7 +8888,7 @@ spawn(function()
                         end
                     else
                         gOrionLib:MakeNotification({
-                            Name = "Nano HUB BOT",
+                            Name = "NIGHT HUB BOT",
                             Content = "Not Have Electric Claw",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -9103,7 +8899,7 @@ spawn(function()
                         if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon").Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon").Level.Value >= 400 then
                             if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true), "Bring") then
                                 OrionLib:MakeNotification({
-                                    Name = "Nano HUB BOT",
+                                    Name = "NIGHT HUB BOT",
                                     Content = "Not Have Enough Material",
                                     Image = "rbxassetid://14919714384",
                                     Time = 5
@@ -9115,7 +8911,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Nano HUB BOT",
+                            Name = "NIGHT HUB BOT",
                             Content = "You Not Have Dragon Talon! ",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -11514,7 +11310,7 @@ spawn(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 OrionLib:MakeNotification({
-                    Name = "Nano Hub",
+                    Name = "Night Hub",
                     Content = "Turn Off Hop Find Moon Please",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11522,7 +11318,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Nano Hub",
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11530,7 +11326,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Nano Hub",
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11538,7 +11334,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Nano Hub",
+                    Name = "Night Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11551,7 +11347,7 @@ spawn(function()
     end)
 
 OrionLib:MakeNotification({
-        Name = "Nano Hub",
+        Name = "Night Hub",
         Content = "Loading script complete!, You can now enable the function!",
         Image = "rbxassetid://4483345998",
         Time = 5
