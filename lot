@@ -2220,11 +2220,21 @@ IQ:AddToggle({
 	end    
 })
 
-local Section = IQ:AddSection({
-	Name = "Event Farmming"
+-----// T \\----------------------
+
+T:AddButton({
+	Name = "Second Sea",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+    end    
 })
 
------// T \\----------------------
+T:AddButton({
+	Name = "Third Sea",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+    end    
+})
 
 local Section = T:AddSection({
     Name = "Teleport Island"
@@ -3451,7 +3461,6 @@ SM:AddToggle({
 	end    
 })
 
-------// function( Cấm m Skid) \\--------------
 
 if game.Players.LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
     for i, v in pairs(
