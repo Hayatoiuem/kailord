@@ -1891,16 +1891,6 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-	Name = "Auto Candy",
-	Default = false,
-    Flag = "Auto Candy",
-    Save = true,
-	Callback = function(Value)
-		_G.AutoCandy = Value
-        StopTween(_G.AutoCandy)
-	end    
-})
-IQ:AddToggle({
 	Name = "Auto 600mas Mele",
 	Default = false,
     Flag = "Auto 600mas Mele",
@@ -5915,60 +5905,6 @@ spawn(
                 elseif _G.BringMode == "low" then
                     _G.BringMode = 350
                 end
-            end
-        end
-    end
-)
-
-spawn(
-    function()
-        while wait() do
-            if _G.AutoCandy then
-                pcall(function()
-                    QuestCheck()
-                    if game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
-                        for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == Mon then
-                                if
-                                    v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and
-                                        v.Humanoid.Health > 0
-                                then
-                                    repeat
-                                        task.wait()
-                                        EquipWeapon(_G.SelectWeapon)
-                                        TurnOnBuso()
-                                        CFrameMob = v.HumanoidRootPart.CFrame
-                                        topos(v.HumanoidRootPart.CFrame * Pos)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-                                        v.Head.CanCollide = false
-                                        v.HumanoidRootPart.Size = Vector3.new(70, 70, 70)
-                                        BringMoney = true
-                                        game:GetService "VirtualUser":CaptureController()
-                                        game:GetService "VirtualUser":Button1Down(Vector2.new(1280, 672))
-                                    until not _G.AutoCandy or v.Humanoid.Health <= 0 or not v.Parent
-                                end
-                            end
-                        end
-                    else
-                        if BypassTP then
-                            if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameQuest.Position).Magnitude > 1500 then
-                                BTP(CFrameQuest)
-                            elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameQuest.Position).Magnitude < 1500 then
-                                topos(CFrameQuest)
-                            end
-                        else
-                            topos(CFrameQuest)
-                        end
-                        BringMoney = false
-                        if game:GetService("ReplicatedStorage"):FindFirstChild(Mon) then
-                            topos(
-                                game:GetService("ReplicatedStorage"):FindFirstChild(Mon).HumanoidRootPart.CFrame *
-                                    CFrame.new(2, 20, 2)
-                            )
-                        end
-                    end
-                end)
             end
         end
     end
